@@ -73,6 +73,7 @@ const init_modals = function() {
     };
 
     const clickHandler = async function(event) {
+        event.preventDefault();
         const toggle = event.target;
         const open = toggle.closest(settings.selectorTrigger);
         const close = toggle.closest(settings.selectorClose);
