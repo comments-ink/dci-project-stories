@@ -5,4 +5,5 @@ django-debug-toolbar>=3.2,<3.3
 django-dotenv>=1.4,<1.5
 django-rosetta>=0.9,<0.10
 djangorestframework>=3.13,<3.14
+django-comments-ink==0.1.0
 six
