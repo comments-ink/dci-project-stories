@@ -14,7 +14,7 @@ Features:
  * It uses a maximum thread level of three, which is the maximum that django-comments-ink CSS stylesheet covers. However it's a lot of threading depth. It makes difficult to follow up on every conversation thread.
  * Users can react to stories by clicking on the clapping icon displayed at the bottom of each story. Clapping is the only allowed reaction to stories. It's configured modifying the setting [`COMMENTS_INK_OBJECT_REACTIONS_ENUM`](https://github.com/comments-ink/django-comments-ink/blob/0abfbee5e02a8886f646d4bd39b3e4d89e699823/django_comments_ink/conf/defaults.py#L38).
  * Users can also send reactions to each comment. The available reactions for comments in this project are the same as the reactions for objects. Modify the setting [`COMMENTS_INK_COMMENT_REACTIONS_ENUM`](https://github.com/comments-ink/django-comments-ink/blob/0abfbee5e02a8886f646d4bd39b3e4d89e699823/django_comments_ink/conf/defaults.py#L35) to change the list of reactions available for comments.
- * django-comments-ink comes by default with a few themes that change the look of the comments. The one in the image below is the default theme, used when the setting `COMMENTS_INK_THEME_DIR` is empty. It can take the following values, that correspond with the directories under `templates/comments/themes` in django-comments-ink:
+ * django-comments-ink comes by default with a few themes that change the look of the comments. The one in the image below is the **avatar_in_header** theme, set explicitly with the setting `COMMENTS_INK_THEME_DIR`. It can take the following values, that correspond with the directories under `templates/comments/themes` in django-comments-ink:
    * `avatar_in_header`
    * `avatar_in_thread`
    * `feedback_in_header`
@@ -24,7 +24,7 @@ Features:
 
 ## Run with Docker
 
-To run the project with Docker, create an `.env` file with the following vars:
+To run the project with Docker, create an `.docker_env` file with the following vars:
 
     PRODUCTION=1
     SECRET_KEY="k!5lw18q1#8#&_7k=ew!k_=p%4a@)($c0b8mp_yxbvw@weng$@"
@@ -37,14 +37,14 @@ To run the project with Docker, create an `.env` file with the following vars:
 And use docker compose to build the image with the Django project, launch the containers and run the migrations:
 
     $ docker compose build django
-    $ docker compose --env-file .env up -d
-    $ docker compose exec django python manage.py migrate
-    $ docker compose exec django python manage.py loaddata ../fixtures/sites.json
-    $ docker compose exec django python manage.py loaddata ../fixtures/users.json
-    $ docker compose exec django python manage.py loaddata ../fixtures/stories.json
-    $ docker compose exec django python manage.py loaddata ../fixtures/comments.json
+    $ docker compose --env-file .docker_env up -d
+    $ docker compose --env-file .docker_env exec django python manage.py migrate
+    $ docker compose --env-file .docker_env exec django python manage.py loaddata ../fixtures/sites.json
+    $ docker compose --env-file .docker_env exec django python manage.py loaddata ../fixtures/users.json
+    $ docker compose --env-file .docker_env exec django python manage.py loaddata ../fixtures/stories.json
+    $ docker compose --env-file .docker_env exec django python manage.py loaddata ../fixtures/comments.json
 
-The Django project must be running in http://localhost:8080.
+The Django project must be running in http://localhost:9090.
 
 ## Run locally
 

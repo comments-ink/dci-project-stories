@@ -69,7 +69,6 @@ MIDDLEWARE = [
     "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.sites.middleware.CurrentSiteMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -168,7 +167,7 @@ LANGUAGES = (
 
 LANGUAGE_COOKIE_NAME = "language"
 
-TIME_ZONE = "Europe/Berlin"
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -225,13 +224,6 @@ COMMENTS_INK_SEND_HTML_EMAIL = True
 
 # This setting is to apply a maximum thread level of 1 to all apps by default.
 COMMENTS_INK_MAX_THREAD_LEVEL = 3
-
-# This setting applies a maximum thread level of 1 only to the 'quotes.quote'
-# app model. Useful in case you want to allow different levels of comment
-# nesting to different app models.
-# COMMENTS_INK_MAX_THREAD_LEVEL_BY_APP_MODEL = {
-#     'quotes.quote': 3  # Meaning 4 levels: from 0 to 3.
-# }
 
 COMMENTS_INK_APP_MODEL_OPTIONS = {
     "default": {
