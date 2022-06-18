@@ -1,14 +1,15 @@
 # dci-project-stories
 
-It is a Django project with the following dependencies:
- * django>=4,<5
- * django-contrib-comments>=2.2,<2.3
- * djangorestframework>=3.12,<3.13
- * django-avatar>=5.0,<5.1
- * django-comments-ink>=0.0,<0.1
+ 1. [Features](#1-features)
+ 2. [Run in Docker](#2-run-in-docker)
+ 3. [Run in your host OS](#3-run-in-your-host-os)
+ 4. [Abour users](#4-about-users)
 
-Features:
- * It doesn't depend on any JavaScript or UI framework.
+<p align="center"><hr /><img src="cover.png"><hr /></p>
+
+## 1. Features
+
+ * It doesn't depend on any JavaScript framework.
  * It uses django-comments-ink vanilla JavaScript plugin.
  * Users and visitors can send comments and replies.
  * It uses a maximum thread level of three, which is the maximum that django-comments-ink CSS stylesheet covers. However it's a lot of threading depth. It makes difficult to follow up on every conversation thread.
@@ -19,12 +20,9 @@ Features:
    * `avatar_in_thread`
    * `feedback_in_header`
 
+## 2. Run in Docker
 
-<p align="center"><hr /><img src="cover.png"><hr /></p>
-
-## Run with Docker
-
-To run the project with Docker, create an `.docker_env` file with the following vars:
+To run the project with Docker, create a `.docker_env` file with the following vars:
 
     PRODUCTION=1
     SECRET_KEY="k!5lw18q1#8#&_7k=ew!k_=p%4a@)($c0b8mp_yxbvw@weng$@"
@@ -46,7 +44,7 @@ And use docker compose to build the image with the Django project, launch the co
 
 The Django project must be running in http://localhost:9090.
 
-## Run locally
+## 3. Run in your host OS
 
 Instead of running the project with Docker, here are the equivalent steps to setup the project locally.
 
@@ -57,6 +55,18 @@ Create a virtual environment:
     $ python3.10 -m venv venv
     $ source venv/bin/activate
     $ pip install -r requirements.txt
+
+### Create .env file
+
+Within the just created virtual environment, generate two new random secret keys. We will used them to feed the `SECRET_KEY` and the `COMMENTS_INK_SALT` environment variables. Generate each key with this command:
+
+    python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+
+Create a `.env` file with the following content:
+
+    PRODUCTION=False
+    SECRET_KEY="secret_key_from_previous_step"
+    COMMENTS_INK_SALT="another_secret_key_from_previous_step"
 
 ### Setup the Django project
 
