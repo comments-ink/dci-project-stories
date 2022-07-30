@@ -7,7 +7,7 @@
 <main>
   <div class="container">
     <div class="intro big fw300">
-      The <strong>stories project</strong> uses the backend and the frontend of django-comments-ink. Comments display the user's avatar. All comment interactions are handled with JavaScript. Users can send comments and can nest two level of replies. Comment reactions have been customized to resemble comment reactions in GitHub.
+      The <strong>stories project</strong> uses the backend and frontend of django-comments-ink. Comments can be nested down two level of replies, and display users' avatars. Comment reactions have been customized to resemble comment reactions in GitHub. Users can react to stories with clapping.
     </div>
   </div>
   <div class="container">
@@ -15,13 +15,13 @@
       <section class="column">
         <h2 class="subtitle text-success">Threaded comments</h2>
         <p>
-          Comments can be nested. The maximum thread level is customizable for the whole site and explicitly for each app.model pair.
+          Comments can be nested. The maximum thread level is customizable.
         </p>
       </section>
       <section class="column">
         <h2 class="subtitle text-success">Notifications and mute-links</h2>
         <p>
-          Comments' authors can receive notifications of follow-up comments. Notifications can be cancelled by clicking on the mute-link.
+          Receive follow-up notifications of your comments, and mute them later.
         </p>
       </section>
     </div>
@@ -31,13 +31,29 @@
       <section class="column">
         <h2 class="subtitle text-success">Comment confirmation</h2>
         <p>
-          Comment confirmation via email when comments' authors are not authenticated. Comments hit the database once they are confirmed.
+          Comment confirmation via email when the user is not authenticated.
         </p>
       </section>
       <section class="column">
         <h2 class="subtitle text-success">Comment reactions</h2>
         <p>
-          Starting with like and dislike reactions, they can be extended to any set of reactions to suit the comments of your website.
+          The set of reactions is customizable, to allow more reactions other than like and dislike.
+        </p>
+      </section>
+    </div>
+  </div>
+  <div class="container">
+    <div class="flex-row">
+      <section class="column">
+        <h2 class="subtitle text-success">Object reactions</h2>
+        <p>
+          You may want to express that you liked a blog story by clicking on a clapping icon.
+        </p>
+      </section>
+      <section class="column">
+        <h2 class="subtitle text-success">Comment votes</h2>
+        <p>
+          Vote comments up or down and list them by their score.
         </p>
       </section>
     </div>

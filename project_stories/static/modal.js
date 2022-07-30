@@ -54,6 +54,7 @@ const init_modals = function() {
     };
 
     const reloadContent = async function(event) {
+        event.preventDefault();
         const target = event.target;
         await loadContent(target);
     };
