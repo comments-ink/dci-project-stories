@@ -9,12 +9,12 @@
 
 ## 1. Features
 
- * It doesn't depend on any JavaScript framework.
- * It uses django-comments-ink vanilla JavaScript plugin.
+ * Lightweight JavaScript frontend, free of dependencies.
  * Users and visitors can send comments and replies.
- * It uses a maximum thread level of three, which is the maximum that django-comments-ink CSS stylesheet covers. However it's a lot of threading depth. It makes difficult to follow up on every conversation thread.
- * Users can react to stories by clicking on the clapping icon displayed at the bottom of each story. Clapping is the only allowed reaction to stories. It's configured modifying the setting [`COMMENTS_INK_OBJECT_REACTIONS_ENUM`](https://github.com/comments-ink/django-comments-ink/blob/0abfbee5e02a8886f646d4bd39b3e4d89e699823/django_comments_ink/conf/defaults.py#L38).
+ * The maximum thread level is three. Three is the maximum that django-comments-ink CSS stylesheet covers. Despite it is supported it makes difficult to follow up on every conversation thread.
+ * Users can send reactions to each story by clicking on the clapping icon displayed at the bottom of each story. Clapping is the only allowed reaction to stories. It has been customized by modifying the setting [`COMMENTS_INK_OBJECT_REACTIONS_ENUM`](https://github.com/comments-ink/django-comments-ink/blob/0abfbee5e02a8886f646d4bd39b3e4d89e699823/django_comments_ink/conf/defaults.py#L38).
  * Users can also send reactions to each comment. The available reactions for comments in this project are the same as the reactions for objects. Modify the setting [`COMMENTS_INK_COMMENT_REACTIONS_ENUM`](https://github.com/comments-ink/django-comments-ink/blob/0abfbee5e02a8886f646d4bd39b3e4d89e699823/django_comments_ink/conf/defaults.py#L35) to change the list of reactions available for comments.
+ * Users can vote for comments, and the list of comments is sorted by the vote score. Comment votes can be enabled/disable using the `comment_votes_enabled` entry of the `COMMENTS_INK_APP_MODEL_OPTIONS` setting. To change the sorting of comments customize the `COMMENTS_INK_LIST_ORDER` setting.
  * django-comments-ink comes by default with a few themes that change the look of the comments. The one in the image below is the **avatar_in_header** theme, set explicitly with the setting `COMMENTS_INK_THEME_DIR`. It can take the following values, that correspond with the directories under `templates/comments/themes` in django-comments-ink:
    * `avatar_in_header`
    * `avatar_in_thread`
