@@ -22,7 +22,7 @@
 
 ## 2. Run in Docker
 
-To run the project with Docker, create a `.docker_env` file with the following vars:
+To run the project with Docker, create a `.env_docker` file with the following vars:
 
     PRODUCTION=1
     SECRET_KEY="k!5lw18q1#8#&_7k=ew!k_=p%4a@)($c0b8mp_yxbvw@weng$@"
@@ -34,13 +34,13 @@ To run the project with Docker, create a `.docker_env` file with the following v
 
 And use docker compose to build the image with the Django project, launch the containers and run the migrations:
 
-    $ docker compose build django
-    $ docker compose --env-file .docker_env up -d
-    $ docker compose --env-file .docker_env exec django python manage.py migrate
-    $ docker compose --env-file .docker_env exec django python manage.py loaddata ../fixtures/sites.json
-    $ docker compose --env-file .docker_env exec django python manage.py loaddata ../fixtures/users.json
-    $ docker compose --env-file .docker_env exec django python manage.py loaddata ../fixtures/stories.json
-    $ docker compose --env-file .docker_env exec django python manage.py loaddata ../fixtures/comments.json
+    $ docker compose --env-file .env_docker build django
+    $ docker compose --env-file .env_docker up -d
+    $ docker compose --env-file .env_docker exec django python manage.py migrate
+    $ docker compose --env-file .env_docker exec django python manage.py loaddata ../fixtures/sites_docker.json
+    $ docker compose --env-file .env_docker exec django python manage.py loaddata ../fixtures/users.json
+    $ docker compose --env-file .env_docker exec django python manage.py loaddata ../fixtures/stories.json
+    $ docker compose --env-file .env_docker exec django python manage.py loaddata ../fixtures/comments.json
 
 The Django project must be running in http://localhost:9090.
 

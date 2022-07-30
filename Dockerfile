@@ -31,6 +31,6 @@ WORKDIR /dci-project-stories/project_stories
 
 USER gunicorn
 
-EXPOSE 9000
+EXPOSE 8000
 
 CMD ["/dci-project-stories/scripts/wait-for-postgres.sh", "/dci-project-stories/scripts/run-gunicorn.sh"]
