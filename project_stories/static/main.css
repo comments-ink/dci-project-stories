@@ -329,6 +329,11 @@ footer p {
     max-width: 735px;
 }
 
+.central-column P {
+    line-height: 1.5;
+}
+
+
 .marquee {
     width: 100%;
     display: flex;
@@ -723,23 +728,12 @@ UL.small LI {
 /* --------------------- */
 /* Override comments.css */
 
-.dci.dci-custom .comment-box .body {
-    line-height: 1.5;
-    color: #555;
-    font-size: 0.85rem;
-}
 .dci.dci-custom .comment-box .body.bordered {
     padding: 8px;
 }
 
 .dci.dci-custom .comment-box .footer {
     padding-left: 20px;
-}
-
-.dci.dci-custom .comment-box-img .body {
-    line-height: 1.4;
-    color: #555;
-    font-size: 0.9rem;
 }
 
 .dci.dci-custom .comment-box-img .body.bordered {

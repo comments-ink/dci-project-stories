@@ -209,7 +209,7 @@ COMMENTS_APP = "django_comments_ink"
 
 COMMENTS_HIDE_REMOVED = False
 
-COMMENTS_INK_SALT = os.getenv("COMMENTS_INK_SALT", "")
+COMMENTS_INK_SALT = os.getenv("COMMENTS_INK_SALT", "").encode("utf-8")
 COMMENTS_INK_CONFIRM_EMAIL = True  # Set to False to disable confirmation
 COMMENTS_INK_FROM_EMAIL = "staff@example.com"
 COMMENTS_INK_CONTACT_EMAIL = "staff@example.com"
@@ -223,11 +223,18 @@ COMMENTS_INK_API_USER_REPR = lambda user: user.name
 COMMENTS_INK_SEND_HTML_EMAIL = True
 
 # This setting is to apply a maximum thread level of 1 to all apps by default.
-COMMENTS_INK_MAX_THREAD_LEVEL = 3
+COMMENTS_INK_MAX_THREAD_LEVEL = 2
+
+COMMENTS_INK_MAX_THREAD_LEVEL_BY_APP_MODEL = {
+    "stories.story": 3
+}
+
+COMMENTS_INK_LIST_ORDER = ("-thread__score", "thread__id", "order")
 
 COMMENTS_INK_APP_MODEL_OPTIONS = {
     "default": {
         "who_can_post": "all",  # Valid values: "users", "all".
+        "comment_votes_enabled": True,
         "comment_flagging_enabled": True,
         "comment_reactions_enabled": True,
         "object_reactions_enabled": True,
@@ -245,6 +252,12 @@ COMMENTS_INK_CSS_CUSTOM_SELECTOR = "dci dci-custom"
 
 # The theme dir, corresponds with any of the directories listed
 # with the template directory: comments/themes/<theme_dir>.
+# Choices:
+#  - ""
+#  - "avatar_in_thread"
+#  - "avatar_in_header"
+#  - "feedback_in_header"
+#
 COMMENTS_INK_THEME_DIR = "avatar_in_header"
 
 COMMENTS_INK_COMMENT_REACTIONS_ENUM = "project_stories.enums.CommentReactionEnum"
@@ -260,6 +273,10 @@ COMMENTS_INK_COMMENTS_PER_PAGE = 10
 
 # Do not override Django Rest Framework renderer_classes and pagination_class.
 COMMENTS_INK_OVERRIDE_DRF_DEFAULTS = False
+
+COMMENTS_INK_CACHE_NAME = "default"
+
+COMMENTS_INK_AUTHOR_LIST_ORDER = ("name", "email")
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "django_comments_ink.paginator.DRFCommentsPaginator",
@@ -305,7 +322,7 @@ LOGGING = {
             "class": "django.utils.log.AdminEmailHandler",
         },
         "console": {
-            "level": "INFO",
+            "level": "DEBUG",
             "filters": ["require_debug_true"],
             "class": "logging.StreamHandler",
             "formatter": "console",

@@ -72,11 +72,6 @@
 {% endblock extra_html %}
 
 {% block extra_js %}
-<script>
-    window.dci = {
-      enable_comment_reactions: true
-    }
-</script>
-<script src="{% static 'django_comments_ink/dist/dci-0.1.0.js' %}"></script>
+<script src="{% static 'django_comments_ink/dist/dci-0.3.0.js' %}"></script>
 <script src="{% static 'modal.js' %}"></script>
 {% endblock %}
