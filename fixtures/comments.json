@@ -17413,7 +17413,7 @@
     "model": "django_comments_ink.commentthread",
     "pk": 866,
     "fields": {
-        "score": 0,
+        "score": -1,
         "rating": 0
     }
 },
@@ -17453,7 +17453,7 @@
     "model": "django_comments_ink.commentthread",
     "pk": 871,
     "fields": {
-        "score": 0,
+        "score": 1,
         "rating": 0
     }
 },
@@ -17469,7 +17469,7 @@
     "model": "django_comments_ink.commentthread",
     "pk": 873,
     "fields": {
-        "score": 0,
+        "score": 1,
         "rating": 0
     }
 },
@@ -17493,7 +17493,7 @@
     "model": "django_comments_ink.commentthread",
     "pk": 904,
     "fields": {
-        "score": 0,
+        "score": 1,
         "rating": 0
     }
 },
@@ -27994,7 +27994,7 @@
         "level": 1,
         "order": 2,
         "followup": false,
-        "nested_count": 5
+        "nested_count": 3
     }
 },
 {
@@ -28004,9 +28004,9 @@
         "thread": 866,
         "parent_id": 866,
         "level": 1,
-        "order": 8,
+        "order": 9,
         "followup": false,
-        "nested_count": 9
+        "nested_count": 7
     }
 },
 {
@@ -28016,9 +28016,9 @@
         "thread": 866,
         "parent_id": 866,
         "level": 1,
-        "order": 18,
+        "order": 19,
         "followup": false,
-        "nested_count": 6
+        "nested_count": 4
     }
 },
 {
@@ -28028,9 +28028,9 @@
         "thread": 866,
         "parent_id": 866,
         "level": 1,
-        "order": 25,
+        "order": 26,
         "followup": false,
-        "nested_count": 1
+        "nested_count": -1
     }
 },
 {
@@ -28040,9 +28040,9 @@
         "thread": 866,
         "parent_id": 866,
         "level": 1,
-        "order": 27,
+        "order": 28,
         "followup": false,
-        "nested_count": 0
+        "nested_count": -2
     }
 },
 {
@@ -28052,7 +28052,7 @@
         "thread": 866,
         "parent_id": 866,
         "level": 1,
-        "order": 28,
+        "order": 29,
         "followup": false,
         "nested_count": 0
     }
@@ -28066,7 +28066,7 @@
         "level": 2,
         "order": 3,
         "followup": false,
-        "nested_count": 2
+        "nested_count": 0
     }
 },
 {
@@ -28102,7 +28102,7 @@
         "level": 2,
         "order": 6,
         "followup": false,
-        "nested_count": 1
+        "nested_count": 0
     }
 },
 {
@@ -28124,9 +28124,9 @@
         "thread": 866,
         "parent_id": 876,
         "level": 2,
-        "order": 9,
+        "order": 10,
         "followup": false,
-        "nested_count": 1
+        "nested_count": 0
     }
 },
 {
@@ -28136,7 +28136,7 @@
         "thread": 866,
         "parent_id": 886,
         "level": 3,
-        "order": 10,
+        "order": 11,
         "followup": false,
         "nested_count": 0
     }
@@ -28148,9 +28148,9 @@
         "thread": 866,
         "parent_id": 876,
         "level": 2,
-        "order": 11,
+        "order": 12,
         "followup": false,
-        "nested_count": 1
+        "nested_count": 0
     }
 },
 {
@@ -28160,7 +28160,7 @@
         "thread": 866,
         "parent_id": 888,
         "level": 3,
-        "order": 12,
+        "order": 13,
         "followup": false,
         "nested_count": 0
     }
@@ -28172,26 +28172,14 @@
         "thread": 866,
         "parent_id": 876,
         "level": 2,
-        "order": 13,
+        "order": 14,
         "followup": false,
-        "nested_count": 4
+        "nested_count": 3
     }
 },
 {
     "model": "django_comments_ink.inkcomment",
     "pk": 891,
-    "fields": {
-        "thread": 866,
-        "parent_id": 890,
-        "level": 3,
-        "order": 14,
-        "followup": false,
-        "nested_count": 0
-    }
-},
-{
-    "model": "django_comments_ink.inkcomment",
-    "pk": 892,
     "fields": {
         "thread": 866,
         "parent_id": 890,
@@ -28203,7 +28191,7 @@
 },
 {
     "model": "django_comments_ink.inkcomment",
-    "pk": 893,
+    "pk": 892,
     "fields": {
         "thread": 866,
         "parent_id": 890,
@@ -28215,7 +28203,7 @@
 },
 {
     "model": "django_comments_ink.inkcomment",
-    "pk": 894,
+    "pk": 893,
     "fields": {
         "thread": 866,
         "parent_id": 890,
@@ -28227,31 +28215,31 @@
 },
 {
     "model": "django_comments_ink.inkcomment",
-    "pk": 895,
+    "pk": 894,
     "fields": {
         "thread": 866,
-        "parent_id": 877,
-        "level": 2,
-        "order": 19,
-        "followup": false,
-        "nested_count": 2
-    }
-},
-{
-    "model": "django_comments_ink.inkcomment",
-    "pk": 896,
-    "fields": {
-        "thread": 866,
-        "parent_id": 895,
+        "parent_id": 890,
         "level": 3,
-        "order": 20,
+        "order": 18,
         "followup": false,
         "nested_count": 0
     }
 },
 {
     "model": "django_comments_ink.inkcomment",
-    "pk": 897,
+    "pk": 895,
+    "fields": {
+        "thread": 866,
+        "parent_id": 877,
+        "level": 2,
+        "order": 20,
+        "followup": false,
+        "nested_count": 1
+    }
+},
+{
+    "model": "django_comments_ink.inkcomment",
+    "pk": 896,
     "fields": {
         "thread": 866,
         "parent_id": 895,
@@ -28263,14 +28251,26 @@
 },
 {
     "model": "django_comments_ink.inkcomment",
+    "pk": 897,
+    "fields": {
+        "thread": 866,
+        "parent_id": 895,
+        "level": 3,
+        "order": 22,
+        "followup": false,
+        "nested_count": 0
+    }
+},
+{
+    "model": "django_comments_ink.inkcomment",
     "pk": 898,
     "fields": {
         "thread": 866,
         "parent_id": 877,
         "level": 2,
-        "order": 22,
+        "order": 23,
         "followup": false,
-        "nested_count": 0
+        "nested_count": -1
     }
 },
 {
@@ -28280,9 +28280,9 @@
         "thread": 866,
         "parent_id": 877,
         "level": 2,
-        "order": 23,
+        "order": 24,
         "followup": false,
-        "nested_count": 1
+        "nested_count": 0
     }
 },
 {
@@ -28292,7 +28292,7 @@
         "thread": 866,
         "parent_id": 899,
         "level": 3,
-        "order": 24,
+        "order": 25,
         "followup": false,
         "nested_count": 0
     }
@@ -28304,9 +28304,9 @@
         "thread": 866,
         "parent_id": 878,
         "level": 2,
-        "order": 26,
+        "order": 27,
         "followup": false,
-        "nested_count": 0
+        "nested_count": -1
     }
 },
 {
@@ -28967,6 +28967,60 @@
         "order": 27,
         "followup": false,
         "nested_count": 0
+    }
+},
+{
+    "model": "django_comments_ink.commentvote",
+    "pk": 1,
+    "fields": {
+        "vote": "+",
+        "comment": 871,
+        "author": 4
+    }
+},
+{
+    "model": "django_comments_ink.commentvote",
+    "pk": 2,
+    "fields": {
+        "vote": "+",
+        "comment": 904,
+        "author": 4
+    }
+},
+{
+    "model": "django_comments_ink.commentvote",
+    "pk": 52,
+    "fields": {
+        "vote": "+",
+        "comment": 873,
+        "author": 9
+    }
+},
+{
+    "model": "django_comments_ink.commentvote",
+    "pk": 57,
+    "fields": {
+        "vote": "-",
+        "comment": 874,
+        "author": 9
+    }
+},
+{
+    "model": "django_comments_ink.commentvote",
+    "pk": 60,
+    "fields": {
+        "vote": "-",
+        "comment": 866,
+        "author": 4
+    }
+},
+{
+    "model": "django_comments_ink.commentvote",
+    "pk": 61,
+    "fields": {
+        "vote": "+",
+        "comment": 874,
+        "author": 4
     }
 },
 {
@@ -31999,7 +32053,7 @@
     "fields": {
         "reaction": "H",
         "comment": 904,
-        "counter": 2
+        "counter": 3
     }
 },
 {
@@ -33214,6 +33268,24 @@
     "fields": {
         "reaction": "E",
         "comment": 944,
+        "counter": 1
+    }
+},
+{
+    "model": "django_comments_ink.commentreaction",
+    "pk": 476,
+    "fields": {
+        "reaction": "H",
+        "comment": 873,
+        "counter": 1
+    }
+},
+{
+    "model": "django_comments_ink.commentreaction",
+    "pk": 477,
+    "fields": {
+        "reaction": "C",
+        "comment": 885,
         "counter": 1
     }
 },
@@ -79466,6 +79538,30 @@
     }
 },
 {
+    "model": "django_comments_ink.commentreactionauthor",
+    "pk": 5783,
+    "fields": {
+        "reaction": 338,
+        "author": 4
+    }
+},
+{
+    "model": "django_comments_ink.commentreactionauthor",
+    "pk": 5786,
+    "fields": {
+        "reaction": 476,
+        "author": 92
+    }
+},
+{
+    "model": "django_comments_ink.commentreactionauthor",
+    "pk": 5788,
+    "fields": {
+        "reaction": 477,
+        "author": 4
+    }
+},
+{
     "model": "django_comments_ink.objectreaction",
     "pk": 1,
     "fields": {
@@ -79485,6 +79581,17 @@
         "object_pk": "2",
         "site": 1,
         "counter": 9
+    }
+},
+{
+    "model": "django_comments_ink.objectreaction",
+    "pk": 3,
+    "fields": {
+        "reaction": "+",
+        "content_type": 20,
+        "object_pk": "3",
+        "site": 1,
+        "counter": 2
     }
 },
 {
@@ -80093,6 +80200,22 @@
     "fields": {
         "reaction": 1,
         "author": 110
+    }
+},
+{
+    "model": "django_comments_ink.objectreactionauthor",
+    "pk": 80,
+    "fields": {
+        "reaction": 3,
+        "author": 4
+    }
+},
+{
+    "model": "django_comments_ink.objectreactionauthor",
+    "pk": 86,
+    "fields": {
+        "reaction": 3,
+        "author": 96
     }
 }
 ]
