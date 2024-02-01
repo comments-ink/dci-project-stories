@@ -27994,7 +27994,7 @@
         "level": 1,
         "order": 2,
         "followup": false,
-        "nested_count": 3
+        "nested_count": 5
     }
 },
 {
@@ -28006,7 +28006,7 @@
         "level": 1,
         "order": 9,
         "followup": false,
-        "nested_count": 7
+        "nested_count": 9
     }
 },
 {
@@ -28018,7 +28018,7 @@
         "level": 1,
         "order": 19,
         "followup": false,
-        "nested_count": 4
+        "nested_count": 6
     }
 },
 {
@@ -28030,7 +28030,7 @@
         "level": 1,
         "order": 26,
         "followup": false,
-        "nested_count": -1
+        "nested_count": 1
     }
 },
 {
@@ -28042,7 +28042,7 @@
         "level": 1,
         "order": 28,
         "followup": false,
-        "nested_count": -2
+        "nested_count": 0
     }
 },
 {
@@ -28066,7 +28066,7 @@
         "level": 2,
         "order": 3,
         "followup": false,
-        "nested_count": 0
+        "nested_count": 2
     }
 },
 {
@@ -28102,7 +28102,7 @@
         "level": 2,
         "order": 6,
         "followup": false,
-        "nested_count": 0
+        "nested_count": 1
     }
 },
 {
@@ -28126,7 +28126,7 @@
         "level": 2,
         "order": 10,
         "followup": false,
-        "nested_count": 0
+        "nested_count": 1
     }
 },
 {
@@ -28150,7 +28150,7 @@
         "level": 2,
         "order": 12,
         "followup": false,
-        "nested_count": 0
+        "nested_count": 1
     }
 },
 {
@@ -28174,7 +28174,7 @@
         "level": 2,
         "order": 14,
         "followup": false,
-        "nested_count": 3
+        "nested_count": 4
     }
 },
 {
@@ -28234,7 +28234,7 @@
         "level": 2,
         "order": 20,
         "followup": false,
-        "nested_count": 1
+        "nested_count": 2
     }
 },
 {
@@ -28270,7 +28270,7 @@
         "level": 2,
         "order": 23,
         "followup": false,
-        "nested_count": -1
+        "nested_count": 0
     }
 },
 {
@@ -28282,7 +28282,7 @@
         "level": 2,
         "order": 24,
         "followup": false,
-        "nested_count": 0
+        "nested_count": 1
     }
 },
 {
@@ -28306,7 +28306,7 @@
         "level": 2,
         "order": 27,
         "followup": false,
-        "nested_count": -1
+        "nested_count": 0
     }
 },
 {
