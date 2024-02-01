@@ -45,11 +45,11 @@
             <div class="dropdown" id="language-dropdown">
               <select id="language-selector">
                 {% for language in LANGUAGES %}
-                  {% ifnotequal current_language language.0 %}
+                  {% if current_language != language.0 %}
                     <option value="{{ language.0 }}">{{ language.0|language_tuple }}</option>
                   {% else %}
                     <option value="{{ language.0 }}" selected>{{ language.0|language_name }}</option>
-                  {% endifnotequal %}
+                  {% endif %}
                 {% endfor %}
               </select>
             </div>

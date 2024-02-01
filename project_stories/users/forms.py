@@ -2,7 +2,7 @@ import re
 
 from django import forms
 from django.contrib.auth import authenticate, get_user_model
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 from .models import Confirmation, User
 

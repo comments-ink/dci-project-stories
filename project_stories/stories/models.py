@@ -54,13 +54,9 @@ moderator.register(Story, StoryCommentModerator)
 
 def check_comments_input_allowed(obj):
     """
-    Return False if obj's published_time is older than 2 years.
+    Return False for story pk=1 (Romeo and Juliet). True otherwise.
     """
-    obj_date = obj.published_time.date()
-    obj_time = obj.published_time.time()
-    in2years_date = date(obj_date.year + 2, obj_date.month, obj_date.day)
-    in2years = timezone.make_aware(datetime.combine(in2years_date, obj_time))
-    if timezone.now() > in2years:
+    if obj.pk == 1:
         return False
     else:
         return True
