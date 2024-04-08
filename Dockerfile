@@ -1,4 +1,4 @@
-FROM python:3.10.14-slim-bookworm AS compile-image
+FROM python:3.11.9-slim-bookworm AS compile-image
 
 ENV PYTHONUNBUFFERED 1
 
@@ -16,7 +16,7 @@ COPY . .
 RUN pip install -r requirements-docker.txt
 
 
-FROM python:3.10.14-slim-bookworm AS build-image
+FROM python:3.11.9-slim-bookworm AS build-image
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends libpq5 wget
