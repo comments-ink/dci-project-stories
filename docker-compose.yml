@@ -1,5 +1,3 @@
-version: '2.1'
-
 networks:
   default:
     name: dci-project-stories
