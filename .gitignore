@@ -4,3 +4,4 @@ venv
 project_stories/db.sqlite3
 media/
 __pycache__
+*~
