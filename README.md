@@ -25,7 +25,7 @@
 To run the project with Docker, create a `.env_docker` file with the following vars:
 
     PRODUCTION=1
-    SECRET_KEY="k!5lw18q1#8#&_7k=ew!k_=p%4a@)($c0b8mp_yxbvw@weng$@"
+    SECRET_KEY="k!5lw18q1#8#&_7k=ew!k_=p%4a@)(Xc0b8mp_yxbvw@wengX@"
     DB_NAME=dci
     DB_USER=dci
     DB_PWD=dci
