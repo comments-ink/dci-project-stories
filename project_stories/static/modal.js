@@ -65,16 +65,9 @@ const init_modals = function() {
         const response = await fetch(trigger.dataset.href, {method: 'GET'});
         if (response.status === 200) {
             const data = await response.text();
-
-            // Extract the <main> element from the response text
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(data, "text/html");
-            const mainElement = doc.querySelector("main");
-            const mainHtml = mainElement.outerHTML;
-
             const body = target && target.querySelector(".modal__wrapper");
             if (body) {
-                body.innerHTML = mainHtml;
+                body.innerHTML = data;
                 addModalListeners();
             }
         }
