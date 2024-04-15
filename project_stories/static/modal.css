@@ -72,18 +72,18 @@
     margin: 20px;
 }
 
+@media screen and (max-width: 839px) {
+    .modal__wrapper {
+        max-width: 80vw;
+    }
+}
+
 @media screen and (min-width: 840px) {
     .modal__wrapper {
         max-width: 732px;
     }
     .modal__wrapper .container {
         width: calc(732px - 2.4rem);
-    }
-}
-
-@media screen and (max-width: 839px) {
-    .modal__wrapper {
-        max-width: 80vw;
     }
 }
 
@@ -95,6 +95,10 @@
     flex-grow: 1;
     /* Optional */
     padding: 1.5rem;
+}
+
+.modal__content .users-grid {
+    grid-template-columns: 1fr 1fr;
 }
 
 .modal.is-active {
